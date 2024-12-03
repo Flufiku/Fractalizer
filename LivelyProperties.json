@@ -1,0 +1,26 @@
+{
+    "DropdownType": {
+        "type": "dropdown",
+        "text": "Fractal Type",
+        "value": "1",
+        "items": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+
+    "SliderIterations": {
+        "type": "slider",
+        "text": "Iterations",
+        "value": 5,
+        "min": 1,
+        "max": 100,
+        "tick": 100
+    },
+
+    "LabelWarning": {
+        "type": "label",
+        "value": "Warning: High iterations may cause lag on lower end machines."
+    }
+}
