@@ -2,11 +2,10 @@
     "DropdownType": {
         "type": "dropdown",
         "text": "Fractal Type",
-        "value": "1",
+        "value": "0",
         "items": [
-            "1",
-            "2",
-            "3"
+            "Sierpinski Triangle",
+            "Sierpinski Carpet"
         ]
     },
 
