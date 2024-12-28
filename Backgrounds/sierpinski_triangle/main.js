@@ -14,6 +14,7 @@ export function draw(ctx, Iterations) {
     ctx.lineTo(pw(1), ph(1));
     ctx.closePath();
     ctx.fill();
+    ctx.fillStyle = 'white';
 
     draw_recursive(ctx, {x: 0.5, y: 0}, {x: 0, y: 1}, {x: 1, y: 1}, Iterations);
 
@@ -36,7 +37,6 @@ function draw_recursive(ctx, point1, point2, point3, depth) {
 }
 
 function draw_triangle(ctx, point1, point2, point3) {
-    ctx.fillStyle = 'white';
     ctx.beginPath();
     ctx.moveTo(pw(point1.x), ph(point1.y));
     ctx.lineTo(pw(point2.x), ph(point2.y));

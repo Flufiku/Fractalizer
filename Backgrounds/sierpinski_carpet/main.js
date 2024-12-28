@@ -9,6 +9,7 @@ export function draw(ctx, Iterations) {
 
     ctx.fillStyle = 'black';
     ctx.fillRect(pw(0), ph(0), size, size);
+    ctx.fillStyle = 'white';
 
     draw_recursive(ctx, {x: 0, y: 0}, 1, Iterations);
 
@@ -32,7 +33,6 @@ function draw_recursive(ctx, topleft, size_square, depth) {
 }
 
 function draw_square(ctx, topleft, size_square, size_canvas) {
-    ctx.fillStyle = 'white';
     ctx.fillRect(pw(topleft.x), ph(topleft.y), size_canvas*size_square, size_canvas*size_square);
 }
 

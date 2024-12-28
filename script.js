@@ -1,5 +1,5 @@
-let Iterations = 3;
-let DropdownType = 0;
+let Iterations = 6;
+let DropdownType = 2;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -9,11 +9,7 @@ draw_fractal();
 window.addEventListener('resize', draw_fractal);
 
 function livelyPropertyListener(name, val)
-{
-    //write name and val on the canvas
-    ctx.font = "30px Arial";
-    ctx.fillText(name + ": " + val, 10, 50);
-    
+{    
     switch(name) {
         case "DropdownType":
             DropdownType = val;
@@ -53,6 +49,11 @@ async function draw_fractal()
 
     else if (DropdownType == 1) {
         const module = await import('./Backgrounds/sierpinski_carpet/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 2) {
+        const module = await import('./Backgrounds/apollonian_gasket/main.js');
         module.draw(ctx, Iterations);
     }
 }
