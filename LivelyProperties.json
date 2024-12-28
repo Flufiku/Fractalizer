@@ -6,7 +6,9 @@
         "items": [
             "Sierpinski Triangle",
             "Sierpinski Carpet",
-            "Apollonian Gasket"
+            "Apollonian Gasket",
+            "Koch Snowflake",
+            "Koch Anti-Snowflake"
         ]
     },
 

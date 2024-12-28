@@ -1,5 +1,5 @@
-let Iterations = 6;
-let DropdownType = 2;
+let Iterations = 3;
+let DropdownType = 0;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -54,6 +54,16 @@ async function draw_fractal()
 
     else if (DropdownType == 2) {
         const module = await import('./Backgrounds/apollonian_gasket/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 3) {
+        const module = await import('./Backgrounds/koch_snowflake/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 4) {
+        const module = await import('./Backgrounds/koch_antisnowflake/main.js');
         module.draw(ctx, Iterations);
     }
 }
