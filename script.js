@@ -1,5 +1,5 @@
 let Iterations = 3;
-let DropdownType = 0;
+let DropdownType = 5;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -64,6 +64,11 @@ async function draw_fractal()
 
     else if (DropdownType == 4) {
         const module = await import('./Backgrounds/koch_antisnowflake/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 5) {
+        const module = await import('./Backgrounds/dragon_curve/main.js');
         module.draw(ctx, Iterations);
     }
 }
