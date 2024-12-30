@@ -1,5 +1,5 @@
-let Iterations = 3;
-let DropdownType = 5;
+let Iterations = 12;
+let DropdownType = 6;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -69,6 +69,11 @@ async function draw_fractal()
 
     else if (DropdownType == 5) {
         const module = await import('./Backgrounds/dragon_curve/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 6) {
+        const module = await import('./Backgrounds/fractal_tree/main.js');
         module.draw(ctx, Iterations);
     }
 }
