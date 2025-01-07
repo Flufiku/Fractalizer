@@ -27,6 +27,6 @@
 
     "LabelWarning": {
         "type": "label",
-        "value": "Warning: High iterations may cause lag on lower end machines."
+        "value": "High iterations may take very long to render, have some patience!"
     }
 }
