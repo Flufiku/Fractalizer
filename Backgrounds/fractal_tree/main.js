@@ -10,24 +10,6 @@ export function draw(ctx, iterations) {
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 1;
 
-    // Draw red dots in the corners
-    ctx.fillStyle = 'red';
-    ctx.beginPath();
-    ctx.arc(pw(0), ph(0), 5, 0, 2 * Math.PI);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(pw(1), ph(0), 5, 0, 2 * Math.PI);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(pw(0), ph(1), 5, 0, 2 * Math.PI);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(pw(1), ph(1), 5, 0, 2 * Math.PI);
-    ctx.fill();
-
     const startX = 0.5;
     const startY = 1;
     const length = 0.2;

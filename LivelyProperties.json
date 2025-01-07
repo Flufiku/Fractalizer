@@ -10,7 +10,9 @@
             "Koch Snowflake",
             "Koch Anti-Snowflake",
             "Dragon Curve",
-            "Fractal Tree"
+            "Fractal Tree",
+            "H-Tree",
+            "Pythagoras Tree"
         ]
     },
 
