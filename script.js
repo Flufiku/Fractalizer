@@ -1,5 +1,5 @@
-let Iterations = 3;
-let DropdownType = 0;
+let Iterations = 4;
+let DropdownType = 8;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");

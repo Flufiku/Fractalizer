@@ -8,21 +8,6 @@ export function draw(ctx, Iterations) {
     height = ctx.canvas.height;
     
 
-    ctx.fillStyle = 'red';
-    ctx.beginPath();
-    ctx.arc(pw(0), ph(0), 5, 0, Math.PI * 2, true); // Top-left corner
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(pw(0), ph(1), 5, 0, Math.PI * 2, true); // Top-right corner
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(pw(1), ph(0), 5, 0, Math.PI * 2, true); // Bottom-left corner
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(pw(1), ph(1), 5, 0, Math.PI * 2, true); // Bottom-right corner
-    ctx.fill();
-
-
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 1;
 

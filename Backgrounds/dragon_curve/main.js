@@ -7,29 +7,6 @@ export function draw(ctx, iterations) {
     width = ctx.canvas.width;
     height = ctx.canvas.height;
 
-    // Draw small red dots in the corners of the canvas
-    ctx.fillStyle = 'red';
-    const dotSize = 3;
-
-    // Top-left corner
-    ctx.beginPath();
-    ctx.arc(pw(0), ph(0), dotSize, 0, 2 * Math.PI);
-    ctx.fill();
-
-    // Top-right corner
-    ctx.beginPath();
-    ctx.arc(pw(1), ph(0), dotSize, 0, 2 * Math.PI);
-    ctx.fill();
-
-    // Bottom-left corner
-    ctx.beginPath();
-    ctx.arc(pw(0), ph(1), dotSize, 0, 2 * Math.PI);
-    ctx.fill();
-
-    // Bottom-right corner
-    ctx.beginPath();
-    ctx.arc(pw(1), ph(1), dotSize, 0, 2 * Math.PI);
-    ctx.fill();
 
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 1;
