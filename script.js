@@ -1,5 +1,5 @@
-let Iterations = 4;
-let DropdownType = 9;
+let Iterations = 7;
+let DropdownType = 10;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -89,6 +89,11 @@ async function draw_fractal()
 
     else if (DropdownType == 9) {
         const module = await import('./Backgrounds/barnsley_fern/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 10) {
+        const module = await import('./Backgrounds/t_square/main.js');
         module.draw(ctx, Iterations);
     }
 }
