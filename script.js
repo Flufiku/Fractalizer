@@ -1,5 +1,5 @@
-let Iterations = 7;
-let DropdownType = 10;
+let Iterations = 1;
+let DropdownType = 11;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -94,6 +94,11 @@ async function draw_fractal()
 
     else if (DropdownType == 10) {
         const module = await import('./Backgrounds/t_square/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 11) {
+        const module = await import('./Backgrounds/minkowski_island/main.js');
         module.draw(ctx, Iterations);
     }
 }
