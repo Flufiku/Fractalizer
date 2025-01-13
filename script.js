@@ -1,4 +1,4 @@
-let Iterations = 1;
+let Iterations = 6;
 let DropdownType = 11;
 
 let canvas = document.getElementById("canvas");

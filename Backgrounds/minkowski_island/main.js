@@ -41,10 +41,10 @@ export function draw(ctx, Iterations) {
     });
 
 
-    const p1 = { x: 0.25, y: 0.25};
-    const p2 = { x: 0.75, y: 0.25};
-    const p3 = { x: 0.75, y: 0.75};
-    const p4 = { x: 0.25, y: 0.75};
+    const p1 = { x: 0.2, y: 0.2};
+    const p2 = { x: 0.8, y: 0.2};
+    const p3 = { x: 0.8, y: 0.8};
+    const p4 = { x: 0.2, y: 0.8};
 
     draw_recursive(ctx, p1, p2, Iterations);
     draw_recursive(ctx, p2, p3, Iterations);
