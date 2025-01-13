@@ -11,36 +11,6 @@ export function draw(ctx, Iterations) {
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 1;
 
-
-    const points = [
-        { x: 0.25, y: 0.25 },
-        { x: 0.75, y: 0.25 },
-        { x: 0.75, y: 0.75 },
-        { x: 0.25, y: 0.75 }
-    ];
-
-    ctx.fillStyle = 'green';
-    points.forEach(point => {
-        ctx.beginPath();
-        ctx.arc(pw(point.x), ph(point.y), 3, 0, 2 * Math.PI);
-        ctx.fill();
-    });
-
-    const corners = [
-        { x: 0, y: 0 },
-        { x: 1, y: 0 },
-        { x: 1, y: 1 },
-        { x: 0, y: 1 }
-    ];
-
-    ctx.fillStyle = 'red';
-    corners.forEach(corner => {
-        ctx.beginPath();
-        ctx.arc(pw(corner.x), ph(corner.y), 3, 0, 2 * Math.PI);
-        ctx.fill();
-    });
-
-
     const p1 = { x: 0.2, y: 0.2};
     const p2 = { x: 0.8, y: 0.2};
     const p3 = { x: 0.8, y: 0.8};
