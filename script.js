@@ -1,5 +1,5 @@
-let Iterations = 15
-let DropdownType = 12;
+let Iterations = 5;
+let DropdownType = 13;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -104,6 +104,11 @@ async function draw_fractal()
 
     else if (DropdownType == 12) {
         const module = await import('./Backgrounds/levy_c_curve/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 13) {
+        const module = await import('./Backgrounds/logistic_map/main.js');
         module.draw(ctx, Iterations);
     }
 }
