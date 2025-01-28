@@ -1,5 +1,5 @@
-let Iterations = 5;
-let DropdownType = 15;
+let Iterations = 3;
+let DropdownType = 0;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -119,6 +119,11 @@ async function draw_fractal()
 
     else if (DropdownType == 15) {
         const module = await import('./Backgrounds/mandelbox/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 16) {
+        const module = await import('./Backgrounds/newton_fractal/main.js');
         module.draw(ctx, Iterations);
     }
 }

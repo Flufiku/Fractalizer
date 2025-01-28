@@ -7,7 +7,7 @@ export function draw(ctx, iterations) {
     width = ctx.canvas.width;
     height = ctx.canvas.height;
 
-    const scale = -2;
+    const scale = -2.0;
     const escapeRadius = 2.0;
     const minX = -1.5;
     const maxX = 1.5;
@@ -80,9 +80,8 @@ function magnitude(z) {
 
 function getColor(iteration, maxIteration) {
     const ratio = iteration / maxIteration;
-    const color = 255-Math.min(Math.floor(255 * ratio), 255);
-    if (color > 10 ) return 'black';
-    return `rgb(${color}, ${color}, ${color})`;
+    const color = Math.floor(255 * ratio);
+    return `rgb(${255-color}, ${255-color}, ${255-color})`;
 }
 
 function plot(ctx, x, y, color) {
