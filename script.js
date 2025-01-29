@@ -1,5 +1,5 @@
 let Iterations = 3;
-let DropdownType = 0;
+let DropdownType = 17;
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -124,6 +124,11 @@ async function draw_fractal()
 
     else if (DropdownType == 16) {
         const module = await import('./Backgrounds/newton_fractal/main.js');
+        module.draw(ctx, Iterations);
+    }
+
+    else if (DropdownType == 17) {
+        const module = await import('./Backgrounds/julia_set/main.js');
         module.draw(ctx, Iterations);
     }
 }
